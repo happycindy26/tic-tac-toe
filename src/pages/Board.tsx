@@ -56,7 +56,7 @@ const Board = () => {
     else if (!w && !squares.filter(square => !square).length) {
       setWinner('Both of you');
     }
-  })
+  }, [squares]);
   return (
     <div>
       {winner ? (<h6>Congratulations! {winner}</h6>) :
