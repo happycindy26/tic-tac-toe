@@ -60,7 +60,7 @@ const Board = () => {
   return (
     <div>
       {winner ? (<h6>Congratulations! {winner}</h6>) :
-      (<h6>Hi {currentPlayer}, it's your turn</h6>)}
+      (<h6>Hi {currentPlayer},it is your turn</h6>)}
       <div className="grid">
         {Array(9).fill(null).map((_, index) => {
           return <Square 
