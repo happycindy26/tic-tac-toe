@@ -59,18 +59,19 @@ const Board = () => {
   }, [squares]);
   return (
     <div>
-      {winner ? (<h6>Congratulations! {winner}</h6>) :
-      (<h6>Hi {currentPlayer},it is your turn</h6>)}
+      {winner ? (<h3>Congratulations! {winner}</h3>) :
+      (<h3>Hi {currentPlayer}, it is your turn</h3>)}
       <div className="grid">
         {Array(9).fill(null).map((_, index) => {
           return <Square 
             key={index}
             onClick={()=>handleSetCurrentPlayer(index)}
             value={squares[index]}
+            winner={winner}
           />
         })}
       </div>
-      <button onClick={reset}>Reset</button>
+      <button className="reset" onClick={reset}>Reset</button>
     </div>
   )
 }
